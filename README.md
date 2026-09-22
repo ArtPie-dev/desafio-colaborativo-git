@@ -6,8 +6,8 @@ Documentação oficial do projeto colaborativo de desenvolvimento em Python/Git.
 
 ## 🎯 Sobre a Issue Atual
 * **Issue Relacionada:** *Implementar tratamento de erros nas entradas do jogador*
-* **Responsável:** [Seu Nome / Usuário]
-* **Branch:** `feature/tratamento-erros-entrada` *(ou o nome da sua branch)*
+* **Responsável:** ARTHUR PIERRE DE AGUIAR DA SILVA
+* **Branch:** Implementar tratamento de erros nas entradas do jogador
 
 ---
 
