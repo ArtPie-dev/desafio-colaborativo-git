@@ -37,3 +37,12 @@ FUNCIONALIDADES
 [x] Validacao de entrada (apenas 4 numeros)
 [x] Calculo automatico de pontuacao
 [x] Historico de vitorias ordenado por maior pontuacao
+
+MINHA CONTRIBUICAO!
+
+Foram adicionadas as artes ASCII e mensagens personalizadas de vitoria e derrota, deixando a interacao com o jogador mais divertida e visual.
+
+
+## Colaboradores
+
+- Suellen Carolynne Queiroz dos Santos
