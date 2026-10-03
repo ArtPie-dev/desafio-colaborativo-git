@@ -1,75 +1,38 @@
- Implementar-tratamento-de-erros-nas-entradas-do-jogador
-# 🧩 Jogo de Adivinhação / Desafio Colaborativo
+# 🧩 Jogo de Adivinhação de Senha (Mastermind)
 
-Documentação oficial do projeto colaborativo de desenvolvimento em Python/Git.
-
----
-
-## 🎯 Sobre a Issue Atual
-* **Issue Relacionada:** *Implementar tratamento de erros nas entradas do jogador*
-* **Responsável:** ARTHUR PIERRE DE AGUIAR DA SILVA
-* **Branch:** Implementar tratamento de erros nas entradas do jogador
+Um jogo interativo desenvolvido em **Python** onde o objetivo é adivinhar uma senha secreta de 4 dígitos gerada aleatoriamente. O projeto conta com validações, dicas baseadas na posição dos dígitos, sistema de pontuação decrescente e um histórico global de vitórias ordenado por pontuação.
 
 ---
 
-## 🛡️ Regras de Validação de Entrada
-Para garantir a estabilidade do fluxo de jogo e evitar que entradas incorretas quebrem a execução, implementamos uma função de saneamento e validação:
+## 🎯 Como Funciona o Jogo
+1. **A Senha Secreta**: O sistema gera um código numérico de 4 dígitos (de 0 a 9) onde nenhum número se repete 3 ou mais vezes.
+2. **Dicas a Cada Tentativa**:
+   - **✔ Corretos na posição certa**: Quantos números você acertou exatamente no lugar correto.
+   - **🔄 Corretos fora do lugar**: Quantos números pertencem à senha, mas estão na posição errada.
+3. **Pontuação**: 
+   - Começa em **1000 pontos**.
+   - Cada tentativa adicional desconta **100 pontos** (com um limite mínimo de **100 pontos**).
+4. **Histórico de Vitórias**: Ao acertar, você pode registrar seu nome para aparecer no ranking ordenado da melhor pontuação para a pior.
 
-python
-if entrada_limpa.lower() == "sair":
-    return True, "desistir"
+---
 
-if len(entrada_limpa) != 4 or not entrada_limpa.isdigit():
-    return False, "⚠️ Entrada inválida! Digite exatamente 4 números entre 0 e 9 (ou 'sair' para abandonar a partida)."
+## ⚙️ Funcionalidades do Código (`main.py`)
+* `gerar_senha()`: Cria a combinação secreta respeitando a regra de repetição de dígitos.
+* `verificar_tentativa()`: Compara a tentativa do usuário com a senha gerada e retorna o feedback de acertos.
+* `calcular_pontuacao()`: Calcula a pontuação final com base no número de tentativas.
+* `jogar()`: Controla o loop principal da partida, validações e salvamento no histórico.
+* `exibir_historico()`: Mostra a tabela de vencedores ordenada por desempenho.
+* `menu()`: Interface textual interativa no terminal.
 
-return True, entrada_limpa
-=======
-==================================================
-JOGO DE ADIVINHACAO DE SENHA
+---
 
-Um jogo em Python de adivinhar senhas com sistema de pontuacao e historico de vitorias.
+## 🚀 Como Executar o Projeto
 
-COMO EXECUTAR
+### Pré-requisitos
+Certifique-se de ter o **Python 3.x** instalado em sua máquina.
 
-Certifique-se de ter o Python 3 instalado.
-
-Execute o script no seu terminal ou prompt de comando:
-
-python main.py
-
-COMO JOGAR
-
-O jogo gera uma senha secreta de 4 digitos.
-
-A cada tentativa, voce recebe um feedback:
-
-Posicao certa: digito correto na posicao correta.
-
-Fora do lugar: digito correto, mas na posicao errada.
-
-Tente adivinhar a senha no menor numero de tentativas para fazer a maior pontuacao.
-
-SISTEMA DE PONTUACAO
-
-Pontuacao inicial (1a tentativa): 1000 pontos
-
-Penalidade por tentativa extra: -100 pontos
-
-Pontuacao minima garantida: 100 pontos
-
-FUNCIONALIDADES
-
-[x] Geracao automatica de senha (maximo 2 repedicoes do mesmo digito)
-[x] Validacao de entrada (apenas 4 numeros)
-[x] Calculo automatico de pontuacao
-[x] Historico de vitorias ordenado por maior pontuacao
-
-MINHA CONTRIBUICAO!
-
-Foram adicionadas as artes ASCII e mensagens personalizadas de vitoria e derrota, deixando a interacao com o jogador mais divertida e visual.
-
-
-## Colaboradores
-
-- Suellen Carolynne Queiroz dos Santos
-main
+### Passo a Passo
+1. Clone este repositório ou baixe os arquivos do projeto:
+   ```bash
+   git clone [https://github.com/ArtPie-dev/desafio-colaborativo-git.git](https://github.com/ArtPie-dev/desafio-colaborativo-git.git)
+   cd desafio-colaborativo-git
